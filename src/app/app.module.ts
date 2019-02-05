@@ -8,6 +8,7 @@ import { TaskbucketComponent } from './components/taskbucket/taskbucket.componen
 import { UtilitiesComponent } from './components/utilities/utilities.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeComponent } from './components/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HomeComponent } from './components/home/home.component';
     UtilitiesComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
