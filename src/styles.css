@@ -1,0 +1,11 @@
+@media screen and (min-width: 35.5em) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .container {
+        margin: 0 10%;
+    }
+}
