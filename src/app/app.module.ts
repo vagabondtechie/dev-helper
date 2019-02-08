@@ -5,12 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReferencesComponent } from './components/references/references.component';
+import { TaskDetailsComponent } from './components/task-details/task-details.component';
 import { TaskbucketComponent } from './components/taskbucket/taskbucket.component';
 import { UtilitiesComponent } from './components/utilities/utilities.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
-
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent,
     NotfoundComponent,
     ReferencesComponent,
+    TaskDetailsComponent,
     TaskbucketComponent,
     UtilitiesComponent,
   ],

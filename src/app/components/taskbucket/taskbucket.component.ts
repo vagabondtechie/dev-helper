@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/models/Task';
+import { TasksService } from 'src/app/services/tasks.service';
 
 @Component({
     selector: 'app-taskbucket',
@@ -10,6 +11,10 @@ export class TaskbucketComponent implements OnInit {
     task: Task;
     tags: string;
     tasks: Task[] = [];
+
+    constructor(private tasksService: TasksService) {
+
+    }
 
     ngOnInit() {
         this.task = this.getEmptyTask();
@@ -33,7 +38,7 @@ export class TaskbucketComponent implements OnInit {
         this.task.deadline = new Date(this.task.deadline);
 
         this.tasks.unshift(this.task);
-        console.log(this.task);
+        this.tasksService.persistTasks(this.tasks);
         this.task = this.getEmptyTask();
         this.tags = null;
         // TODO Show some success message to the user

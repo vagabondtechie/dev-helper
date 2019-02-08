@@ -32,7 +32,10 @@
 
 **Post Condition**
 
- 1. The task (along with a link to edit it), its deadline and tags should be visible.
+ 1. The task (along with a link to edit it), its deadline 
+ and tags should be visible.
+
+=========================================================
 
 
 

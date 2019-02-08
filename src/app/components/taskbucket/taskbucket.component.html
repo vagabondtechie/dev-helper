@@ -9,7 +9,7 @@
 
         <fieldset>
             <label for="deadline">Deadline</label>
-            <input id="deadline" type="date" class="pure-input-1" placeholder="Deadline" required [(ngModel)]="task.deadline" [ngModelOptions]="{standalone: true}">
+            <input id="deadline" type="date" class="pure-input-1-4" placeholder="Deadline" required [(ngModel)]="task.deadline" [ngModelOptions]="{standalone: true}">
         </fieldset>
 
         <fieldset class="pure-group">
@@ -17,14 +17,19 @@
             <input id="tags" type="text" class="pure-input-1" placeholder="Comma seperated tags" maxlength="50" [(ngModel)]="tags" [ngModelOptions]="{standalone: true}">
         </fieldset>
 
-        <button class="pure-button pure-button-primary" (click)="createTask()">Create Task</button>
+        <button class="pure-button geek" (click)="createTask()">Create Task</button>
     </form>
 </div>
 <hr />
-<div *ngIf="tasks.length > 0">
+<h1>Tasks</h1>
+<div *ngIf="tasks.length > 0; else emptyTaskList">
     <div *ngFor="let aTask of tasks">
-        <h1><a routerLink="/tasks/{{aTask.id}}">{{ aTask.description }}</a></h1>
+        <h1><a [routerLink]="['/tasks', aTask.id]">{{ aTask.description }}</a></h1>
         <strong>Deadline: </strong>  <em>{{ aTask.deadline | date:"dd MMM, yyyy" }}</em>
         <strong> | Tags: </strong>  {{ aTask.tags }}
+        <hr />
     </div>
 </div>
+<ng-template #emptyTaskList>
+    No tasks in your bucket. Go enjoy :)
+</ng-template>
