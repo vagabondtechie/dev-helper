@@ -19,5 +19,12 @@
 
         <button class="pure-button pure-button-primary" (click)="createTask()">Create Task</button>
     </form>
-
+</div>
+<hr />
+<div *ngIf="tasks.length > 0">
+    <div *ngFor="let aTask of tasks">
+        <h1><a routerLink="/tasks/{{aTask.id}}">{{ aTask.description }}</a></h1>
+        <strong>Deadline: </strong>  <em>{{ aTask.deadline | date:"dd MMM, yyyy" }}</em>
+        <strong> | Tags: </strong>  {{ aTask.tags }}
+    </div>
 </div>

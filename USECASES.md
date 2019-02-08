@@ -18,6 +18,21 @@
  1. The new task should be added to the list of tasks
  2. The form should be back in the clear state
 
+=========================================================
+
+### Usecase 2
+**Title** : Display a list of tasks
+
+**Steps** : 
+ NA
+
+**Pre Condition**
+
+ 1. There should exist at least one task in the task list
+
+**Post Condition**
+
+ 1. The task (along with a link to edit it), its deadline and tags should be visible.
 
 
 
