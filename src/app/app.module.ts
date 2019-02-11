@@ -11,6 +11,7 @@ import { UtilitiesComponent } from './components/utilities/utilities.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TasksService } from './services/tasks.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    TasksService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

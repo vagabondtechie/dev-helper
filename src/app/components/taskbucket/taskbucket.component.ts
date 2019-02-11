@@ -10,7 +10,7 @@ import { TasksService } from 'src/app/services/tasks.service';
 export class TaskbucketComponent implements OnInit {
     task: Task;
     tags: string;
-    tasks: Task[] = [];
+    tasks: Task[];
 
     constructor(private tasksService: TasksService) {
 
@@ -19,6 +19,7 @@ export class TaskbucketComponent implements OnInit {
     ngOnInit() {
         this.task = this.getEmptyTask();
         this.tags = null;
+        this.tasks = this.tasksService.loadTasks();
     }
 
     createTask() {
