@@ -35,6 +35,7 @@ export class TaskbucketComponent implements OnInit {
             this.task.tags = this.tags.split(',').map(function(tag) { return tag.trim(); });
         }
 
+        this.task.id = this.tasksService.getNewId();
         this.task.createdOn = new Date();
         this.task.deadline = new Date(this.task.deadline);
 
