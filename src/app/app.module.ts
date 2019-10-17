@@ -12,6 +12,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TasksService } from './services/tasks.service';
+import { PathsComponent } from './components/paths/paths.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TasksService } from './services/tasks.service';
     TaskDetailsComponent,
     TaskbucketComponent,
     UtilitiesComponent,
+    PathsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+<div>
+    <header><h1>Add Path</h1></header>
+    <form class="pure-form pure-form-stacked">
+        <fieldset>
+            <label for="description">Path Description</label>
+            <input id="description" type="text" class="pure-input-1" placeholder="Path Description" required
+                maxlength="50" [(ngModel)]="path.description" [ngModelOptions]="{standalone: true}">
+        </fieldset>
+
+        <fieldset class="pure-group">
+            <label for="location">Path Location</label>
+            <input id="location" type="text" class="pure-input-1" placeholder="Absolute/Relative Path" required
+                maxlength="150" [(ngModel)]="path.location" [ngModelOptions]="{standalone: true}">
+        </fieldset>
+
+        <button class="pure-button geek" (click)="savePath()">Save Path</button>
+    </form>
+</div>
+<hr />
+<h1>Saved Paths</h1>
+<div *ngIf="paths.length > 0; else emptyPathList">
+    <div *ngFor="let aPath of paths">
+        <h3>{{ aPath.description }}</h3>
+        <strong>Location: </strong>  {{ aPath.location }}
+        <hr />
+    </div>
+</div>
+<ng-template #emptyPathList>
+    No saved paths. Are you a developer? Really?
+</ng-template>

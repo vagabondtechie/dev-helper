@@ -6,10 +6,12 @@ import { TaskbucketComponent } from './components/taskbucket/taskbucket.componen
 import { HomeComponent } from './components/home/home.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { TaskDetailsComponent } from './components/task-details/task-details.component';
+import { PathsComponent } from './components/paths/paths.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'references', component: ReferencesComponent },
+    { path: 'paths', component: PathsComponent },
     { path: 'tasks', component: TaskbucketComponent },
     { path: 'tasks/:id', component: TaskDetailsComponent, pathMatch: 'full' },
     { path: 'utilities', component: UtilitiesComponent },
