@@ -27,4 +27,11 @@ export class TasksService {
         }
         return [];
     }
+
+    getEmptyTask(): Task {
+        return {
+            description: null,
+            deadline: null
+        };
+    }
 }

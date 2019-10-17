@@ -17,7 +17,7 @@ export class TaskbucketComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.task = this.getEmptyTask();
+        this.task = this.tasksService.getEmptyTask();
         this.tags = null;
         this.tasks = this.tasksService.loadTasks();
     }
@@ -41,15 +41,8 @@ export class TaskbucketComponent implements OnInit {
 
         this.tasks.unshift(this.task);
         this.tasksService.persistTasks(this.tasks);
-        this.task = this.getEmptyTask();
+        this.task = this.tasksService.getEmptyTask();
         this.tags = null;
         // TODO Show some success message to the user
-    }
-
-    private getEmptyTask(): Task {
-        return {
-            description: null,
-            deadline: null
-        };
     }
 }
