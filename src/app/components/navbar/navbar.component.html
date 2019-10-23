@@ -1,9 +1,10 @@
 <div class="navbar pure-menu pure-menu-horizontal">
-    <span class="pure-menu-heading"><strong><a routerLink="/" class="pure-menu-link">Dev Helper</a></strong></span>
+    <span class="pure-menu-heading">
+        <strong><a routerLink="/" class="pure-menu-link">Dev Helper</a></strong>
+    </span>
     <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a routerLink="/references" class="pure-menu-link">References</a></li>
-        <li class="pure-menu-item"><a routerLink="/paths" class="pure-menu-link">Paths</a></li>
-        <li class="pure-menu-item"><a routerLink="/tasks" class="pure-menu-link">Task Bucket</a></li>
-        <li class="pure-menu-item"><a routerLink="/utilities" class="pure-menu-link">Utility functions</a></li>
+        <li class="pure-menu-item" *ngFor="let item of navItems">
+            <a [routerLink]="item.url" class="pure-menu-link" [ngClass]="{active: item.active}" (click)="activate(item)">{{ item.name }}</a>
+        </li>
     </ul>
 </div>
