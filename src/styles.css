@@ -26,6 +26,10 @@ button.geek {
     font-weight: bold;
 }
 
+input[type] {
+    color: black;
+}
+
 @media screen and (min-width: 48em) {
     .container {
         margin-left: 10%;
