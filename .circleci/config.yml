@@ -2,8 +2,8 @@ version: 2
 jobs:
     build:
         docker:
-            image: node:13.5
+          - image: circleci/node:13.5
         steps:
-            - checkout
-            - npm install
-            - run: npm run build
+          - checkout
+          - run: npm install
+          - run: npm run build
