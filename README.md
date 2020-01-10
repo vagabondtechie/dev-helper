@@ -12,3 +12,5 @@ This project is a tool for developers to help them in their daily work. As of no
   
      - [ ] Regular expression tester
      - [ ] Extra white space remover
+
+[![Run on Repl.it](https://repl.it/badge/github/vagabondtechie/dev-helper)](https://repl.it/github/vagabondtechie/dev-helper)
