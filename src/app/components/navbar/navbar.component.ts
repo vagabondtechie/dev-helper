@@ -11,7 +11,7 @@ export class NavbarComponent {
 
     constructor() {
         this.navItems = [
-            { name: 'Dev Helper', url: '/', active: true },
+            { name: 'DEV HELPER', url: '/', active: true },
             { name: 'Paths', url: '/paths', active: false },
             { name: 'Task Bucket', url: '/tasks', active: false },
             { name: 'References', url: '/references', active: false },

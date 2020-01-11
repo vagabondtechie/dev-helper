@@ -1,11 +1,7 @@
-<div class="navbar pure-menu pure-menu-horizontal">
-    <ul class="pure-menu-list">
-        <li class="pure-menu-item" *ngFor="let item of navItems trackBy $index">
-            <span *ngIf="$index == 0" class="pure-menu-heading">
-                <strong><a routerLink="/" class="pure-menu-link">Dev Helper</a></strong>
-            </span>
-
-            <a *ngIf="$index != 0" [routerLink]="item.url" class="pure-menu-link" [ngClass]="{active: item.active}" (click)="activate(item)">{{ item.name }}</a>
-        </li>
-    </ul>
-</div>
+<nav class="navbar">
+  <ul class="nav nav-pills">
+    <li class="nav-item" *ngFor="let item of navItems trackBy $index">
+        <a *ngIf="$index != 0" [routerLink]="item.url" class="nav-link" [ngClass]="{active: item.active}" (click)="activate(item)">{{ item.name }}</a>
+    </li>
+  </ul>
+</nav>
