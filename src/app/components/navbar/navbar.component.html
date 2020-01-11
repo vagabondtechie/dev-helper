@@ -1,10 +1,11 @@
 <div class="navbar pure-menu pure-menu-horizontal">
-    <span class="pure-menu-heading">
-        <strong><a routerLink="/" class="pure-menu-link">Dev Helper</a></strong>
-    </span>
     <ul class="pure-menu-list">
-        <li class="pure-menu-item" *ngFor="let item of navItems">
-            <a [routerLink]="item.url" class="pure-menu-link" [ngClass]="{active: item.active}" (click)="activate(item)">{{ item.name }}</a>
+        <li class="pure-menu-item" *ngFor="let item of navItems trackBy $index">
+            <span *ngIf="$index == 0" class="pure-menu-heading">
+                <strong><a routerLink="/" class="pure-menu-link">Dev Helper</a></strong>
+            </span>
+
+            <a *ngIf="$index != 0" [routerLink]="item.url" class="pure-menu-link" [ngClass]="{active: item.active}" (click)="activate(item)">{{ item.name }}</a>
         </li>
     </ul>
 </div>
