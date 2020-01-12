@@ -4,7 +4,6 @@ import { TasksService } from 'src/app/services/tasks.service';
 
 @Component({
     selector: 'app-taskbucket',
-    styleUrls: ['./taskbucket.component.css'],
     templateUrl: './taskbucket.component.html'
 })
 export class TaskbucketComponent implements OnInit {
