@@ -5,7 +5,7 @@ import { UiHelperService } from 'src/app/services/ui-helper.service';
 
 @Component({
   selector: 'app-paths',
-  templateUrl: './paths.component.html']
+  templateUrl: './paths.component.html'
 })
 export class PathsComponent implements OnInit {
   path: Path;
