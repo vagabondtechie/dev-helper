@@ -5,9 +5,9 @@ jobs:
           - image: circleci/node:13.5
         steps:
           - checkout
-          - run: npm install -g @angular/cli
+          - run: npm install @angular/cli --save-dev
           - run: npm install
           - run: ng build --prod --output-path=docs
-          - run: git add .
+          - run: git add docs/*
           - run: git commit -m "Updated latest deployable version for gh-pages"
           - run: git push origin master
