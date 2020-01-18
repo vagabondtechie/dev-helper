@@ -6,4 +6,7 @@ jobs:
         steps:
           - checkout
           - run: npm install
-          - run: npm run build
+          - run: ng build --prod --output-path=docs
+          - run: git add .
+          - run: git commit -m "Updated latest deployable version for gh-pages"
+          - run: git push origin master
