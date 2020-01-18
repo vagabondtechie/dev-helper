@@ -5,6 +5,7 @@ jobs:
           - image: circleci/node:13.5
         steps:
           - checkout
+          - run: npm install -g @angular/cli
           - run: npm install
           - run: ng build --prod --output-path=docs
           - run: git add .
